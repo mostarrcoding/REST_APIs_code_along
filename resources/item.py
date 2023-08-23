@@ -38,7 +38,7 @@ class Item(MethodView):
             abort(404, message="Item not found.")
 
 
-@blp.route("/item") #3ndpoitn
+@blp.route("/item")
 class ItemList(MethodView):
     @blp.response(200, ItemSchema(many=True))
     def get(self):

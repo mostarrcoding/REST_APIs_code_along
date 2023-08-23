@@ -1,7 +1,13 @@
+import os
+
 from flask import Flask, request
 from flask_smorest import Api
+from flask_jwt_extended import JWTManager
+
 from resources.item import blp as ItemBlueprint
 from resources.store import blp as StoreBlueprint
+from ressources.tag import blp as TagBlueprint
+
 
 stores = [{"name": "My Store", "items": [{"name": "my item", "price": 15.99}]}]
 
