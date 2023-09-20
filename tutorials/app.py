@@ -1,10 +1,9 @@
-#!/usr/bin/env python
-# encoding: utf-8
-import json
-from flask import Flask, jsonify
+from flask import Flask
+
 app = Flask(__name__)
+
 @app.route('/')
 def index():
-    return jsonify({'name': 'alice',
-                    'email': 'alice@outlook.com'})
-app.run()
+    return 'Web App with Python Flask!'
+
+app.run(host='0.0.0.0', port=81)
